@@ -5,3 +5,12 @@ services:
 script:
     - docker build -t p/node .
     - docker images p/node
+
+before_deploy:
+    - docker login -u tahsib -p \\docker.id
+
+deploy:
+    provider: script
+    script: docker push p/node
+    on:
+        branch: master
