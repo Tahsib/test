@@ -7,7 +7,7 @@ script:
     - docker images p/node
 
 before_deploy:
-    - docker login -u "tahsib" -p "\\docker.id"
+    - docker login -u tahsib -p docker.id13
 
 deploy:
     provider: script
